@@ -57,7 +57,7 @@ i = startnum
 den_num = []
 while True :
     #i = r.shuffle[2,4,10,17,35,41]
-    
+    '''
     while True :
         choice_list = [2,10,17,35,41,51]
         i = r.choice(choice_list)
@@ -68,12 +68,18 @@ while True :
             continue
         else :
             break
+    '''
             
-    #i = r.randint(39,100)
+    i = r.randint(1,10)
     #i += 1
     #i = 35
     ProsFileNum = str(i)
-    filepath = "./pros/"+ProsFileNum+".txt"
+    
+    #network
+    filepath = "./pros_network/"+ProsFileNum+".txt"
+
+    #comsys
+    filepath = "./pros_comsys/"+ProsFileNum+""
 
     try :
         pro_table = get_problem_table(filepath)
