@@ -62,7 +62,9 @@ class gen2 :
             pro_table[0]["pro_rightans"] = str(pro_table[0]["pro_rightans"]).split(".")
         return pro_table
     def check_ans_word(userans,pro_table) :
-        if userans == pro_table :
+        #print( pro_table[0]["pro_rightans"])
+        #print(userans)
+        if userans[0] == pro_table[0]["pro_rightans"] :
             return True
         return False
     def check_ans_sentence(userans,pro_table) :
@@ -138,9 +140,9 @@ while True :
             break
     '''
             
-    #i = r.randint(0,10)
+    i = r.randint(1,3)
     #i += 1
-    i = 1
+    #i = 1
     ProsFileNum = str(i)
     
     #network nomal
