@@ -1,1 +1,2 @@
-s,(데이터.처리.속도.않),흐름제어란?
+test_type,pro_rightans,show_pro
+s,데이터.처리.속도.않,흐름제어란?
