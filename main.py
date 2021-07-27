@@ -32,6 +32,8 @@ def get_ans() :
         if a == "ㄴ" or a == "s" :
             break
         res.append(a)
+    for i in range(len(res)) :
+        res[i] = str(res[i]).upper()
     return res
 
 class gen2 :
@@ -71,6 +73,10 @@ class gen2 :
         right_ans_count = 0
         #print("gen2 check_ans_sentence userans :",userans[0])
         #print("gen2 check_ans_sentence pro_table :",pro_table)
+        
+        for i in range(len(pro_table[0]['pro_rightans'])) :
+            #print("pro_table[0]['pro_rightans'][i] :",pro_table[0]['pro_rightans'][i])
+            pro_table[0]['pro_rightans'][i] = str(pro_table[0]['pro_rightans'][i]).upper()
         for i in range(len(pro_table)) :
             temp_right_ans_count = 0
             for j in range(len(pro_table[i]['pro_rightans'])) :  
