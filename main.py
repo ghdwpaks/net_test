@@ -2,6 +2,10 @@ import csv
 import random as r
 from typing import Counter
 import os
+import cv2
+from multiprocessing import Process
+import threading
+import time
 
 
 def get_problem_table(filepath) :
@@ -36,19 +40,44 @@ def get_ans() :
         res[i] = str(res[i]).upper()
     return res
 
-class gen2 :
+class img(threading.Thread) :
+    def __init__(self,name):
+        super().__init__()
+        self.name = name
+        
+    def showimg(self,imgfilepath) :
+        print("sub thread start ", threading.currentThread().getName())
+        
+        time.sleep(10)
+        print("sub thread end ", threading.currentThread().getName())
+        print("gen2 run imgfilepath :",imgfilepath)
+        img = cv2.imread(imgfilepath)
+        
+        cv2.imshow('Show Images',img)
+        cv2.waitKey()
+        
+        
+        #cv2.destroyAllWindows() 
+
+class gen2_img_main(threading.Thread) :
     
-    def test_main(pro_table) :
-        #print(pro_table)
-        pro_table = gen2.setting_pro(pro_table)
+    def __init__(self,name):
+        super().__init__()
+        self.name = name
+    def img_test_main(self,pro_table) :
         print(pro_table[0]["show_pro"])
         userans = get_ans()
-        res = False
-        if pro_table[0]['test_type'] == 's' :
-            res = gen2.check_ans_sentence(userans,pro_table)
-        elif pro_table[0]['test_type'] == 'w' :
-            res = gen2.check_ans_word(userans,pro_table)
+        cv2.destroyAllWindows() 
+        res = gen2.check_ans_sentence(userans,pro_table)
         
+        gen2.show_result(res,pro_table)
+
+        
+
+class gen2 :
+    
+    
+    def show_result(res,pro_table) :
         if res :
             print("맞았습니다.")
         else :
@@ -58,6 +87,36 @@ class gen2 :
             for i in range(len(pro_table)) :
                 print(pro_table[i]['pro_rightans'])
             print()
+
+
+    def test_main(pro_table) :
+        #print(pro_table)
+        pro_table = gen2.setting_pro(pro_table)
+        
+        
+        res = False
+        if pro_table[0]['test_type'] == "img" :
+            imgfilepath = pro_table[0]['imgfilepath']
+            print("imgfilepath :",imgfilepath)
+            imgshower = img("thread 1")
+            imgshower.daemon = True
+            imgshower.showimg(imgfilepath)
+
+            maintester = gen2_img_main("thread 2")
+            maintester.daemon =True
+            maintester.img_test_main(pro_table)
+
+            
+        else :
+            
+            print(pro_table[0]["show_pro"])
+            userans = get_ans()
+            if pro_table[0]['test_type'] == 's' :
+                res = gen2.check_ans_sentence(userans,pro_table)
+            elif pro_table[0]['test_type'] == 'w' :
+                res = gen2.check_ans_word(userans,pro_table)
+        
+        gen2.show_result(res,pro_table)
 
     def setting_pro(pro_table) :
         if pro_table[0]["test_type"] == 's' :
@@ -146,9 +205,9 @@ while True :
             break
     '''
             
-    i = r.randint(1,3)
+    #i = r.randint(1,3)
     #i += 1
-    #i = 1
+    i = 3
     ProsFileNum = str(i)
     
     #network nomal
