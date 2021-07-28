@@ -37,11 +37,23 @@ def get_ans() :
     return res
 
 class gen2 :
+    def print_pro(pro_cont) :
+        #print("gen2 print_pro pro_cont :",pro_cont)
+        pro_cont = list(pro_cont)
+        #print("gen2 print_pro list(pro_cont) :",pro_cont)
+
+        for i in range(len(pro_cont)) :
+            if pro_cont == '/' :
+                print()
+            else :
+                print(pro_cont[i],end="")
+        print()
     
     def test_main(pro_table) :
         #print(pro_table)
         pro_table = gen2.setting_pro(pro_table)
-        print(pro_table[0]["show_pro"])
+        #print(pro_table[0]["show_pro"])
+        gen2.print_pro(str(pro_table[0]["show_pro"]))
         userans = get_ans()
         res = False
         if pro_table[0]['test_type'] == 's' :
