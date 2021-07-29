@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,3,2.UDP 패킷 헤더에 속하지 않는 것은?(2019년 4회)/1.Source Prot/2. Destination Port/3. Window/4. Checksum

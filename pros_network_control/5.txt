@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,2,9.라우팅 프로토콜 중 네트워크 거리를 계산할때 홉(Hop)의 총계만을 사용한것은?/1. SNMP/2. RIP/3. SMB/4. OSPF

@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,2,4. 홉 카운팅 기반으로 경로를 설정하는 프로토콜은(2019년 4회)/1. SNMP/2. RIP/3. SMB/4. OSPF

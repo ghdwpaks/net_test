@@ -43,7 +43,8 @@ class gen2 :
         #print("gen2 print_pro list(pro_cont) :",pro_cont)
 
         for i in range(len(pro_cont)) :
-            if pro_cont == '/' :
+
+            if pro_cont[i] == '/' :
                 print()
             else :
                 print(pro_cont[i],end="")
@@ -70,6 +71,7 @@ class gen2 :
             for i in range(len(pro_table)) :
                 print(pro_table[i]['pro_rightans'])
             print()
+        os.system("pause")
 
     def setting_pro(pro_table) :
         if pro_table[0]["test_type"] == 's' :
@@ -123,6 +125,7 @@ class gen1 :
             for i in range(len(right_ans)) :
                 print(right_ans[i])
             print()
+        os.system("pause")
 
 
     def check_ans(userans, rightans) :
@@ -144,21 +147,25 @@ i = startnum
 ben_num = []
 gen = 2
 while True :
+    os.system("cls")
     #i = r.shuffle[2,4,10,17,35,41]
-    '''
+    
     while True :
-        choice_list = [2,10,17,35,41,51]
+        choice_list = []
+        for i in range(0,21) :
+            choice_list.append(i)
+
         i = r.choice(choice_list)
         if len(choice_list) == len(ben_num) :
             ben_num.clear()
 
-        if i in den_num :
+        if i in ben_num :
             continue
         else :
             break
-    '''
+    
             
-    i = r.randint(1,3)
+    #i = r.randint(1,3)
     #i += 1
     #i = 1
     ProsFileNum = str(i)
@@ -183,6 +190,7 @@ while True :
         ben_num.append(i)
     except FileNotFoundError :
         i = startnum
+        ben_num.append(i)
         continue
     #os.system("pause")
 

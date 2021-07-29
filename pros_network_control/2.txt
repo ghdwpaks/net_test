@@ -1,2 +1,2 @@
 test_type,pro_rightans,show_pro
-w,주소 지정,송신자와 수신자의 물리 주소를 프레임 헤더에 추가하는것은?
+w,1,6. OSI 7 Layer에 따라 프로토콜을 분류할때 다음 보기들 중 같은 계층에서 동작하지 않는것은?(2020년 1회)/1. SMTP/2. RARP/3. ICMP/4. IGMP

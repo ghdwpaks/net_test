@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,13. Ethernet 같은 네트워크가 제공하는 브로드캐스트 기능을 사용하여 목적지 IP Address에 물리적 하드웨어 (MAC)주소를 매핑시키는것은?(2020년1회)/1. ARP/2. RARP/3. DNS/4. DHCP

@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,1,1. TCP IP 프로토콜 계층 구조에서 볼때 응용 계층에서 동작하는 프로토콜로 옳지 않은 것은?(2019년 4회)/1. ICMP/2. SMTP/3. SNMP/4. TFTP

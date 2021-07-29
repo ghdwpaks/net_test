@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,4,14. SNMP에 대한 설명중 옳지 않은 것은?(2019년 4회)/1. UDP상에서 작동한다./2. 비동기식 요청 및 응답 메시지 프로토콜이다./3. 4가지 기능(Get\Get Next\Set\Trap)을 수행한다./4.E-Mail을 주고받기 위해 사용되는 프로토콜이다.

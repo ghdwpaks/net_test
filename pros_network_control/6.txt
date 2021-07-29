@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+w,3,11.TFTP프로토콜에 대한 설명 중 옳지 않은 것은?(2020년 1회)/1. Trivial File Transfer Protocol의 약어이다./2. 네트워크를 통한 전송 서비스이다./3. 3방향 핸드셰이킹 방법은 TCP 세션을 통해 전송한다./4. 신속한 파일의 전송을 원할 경우 FTP보다 훨씬 큰 효과를 얻을 수 있다.

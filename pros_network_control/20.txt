@@ -1,0 +1,2 @@
+test_type,pro_rightans,show_pro
+s,1.3.7.8,OSI 7 계층 중 3계층인 네트워크계층에 해당하는 프로토콜을 모두 고르시오/보기1>ARP/보기2>TCP/보기3>RIP/보기4>UDP/보기5>TELNET/보기6>FTP/보기7>ICMP/보기8>RARP
