@@ -129,6 +129,7 @@ class gen1 :
 
 
     def check_ans(userans, rightans) :
+        userans = str(userans).strip()
         i = 0 
         right_count = 0
         right_nums = []
@@ -172,12 +173,22 @@ while True :
     
     #network nomal
     filepath = "./pros_network_nomal/"+ProsFileNum+".txt"
+    gen = 1
 
     #comsys
     filepath = "./pros_comsys/"+ProsFileNum+""
+    gen = 1
 
     #network control
     filepath = "./pros_network_control/"+ProsFileNum+".txt"
+    gen = 2
+
+    filepath = "./pros_data_control/"+ProsFileNum+""
+    gen = 1
+
+    filepath = "./pros_java_classes/"+ProsFileNum+""
+    gen = 1
+    
     #print("filepath :",filepath)
     try :
         pro_table = get_problem_table(filepath)
