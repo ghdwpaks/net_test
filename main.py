@@ -153,7 +153,7 @@ while True :
     
     while True :
         choice_list = []
-        for i in range(0,21) :
+        for i in range(1,6) :
             choice_list.append(i)
 
         i = r.choice(choice_list)
@@ -189,6 +189,9 @@ while True :
     filepath = "./pros_java_classes/"+ProsFileNum+""
     gen = 1
     
+    filepath = "./pros_network_nomal2/"+ProsFileNum
+    gen = 1
+
     #print("filepath :",filepath)
     try :
         pro_table = get_problem_table(filepath)
